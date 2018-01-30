@@ -1,0 +1,11 @@
+PASS	Basic Statistics	chr22_206583718.simulated.custom.10x100
+FAIL	Per base sequence quality	chr22_206583718.simulated.custom.10x100
+FAIL	Per sequence quality scores	chr22_206583718.simulated.custom.10x100
+PASS	Per base sequence content	chr22_206583718.simulated.custom.10x100
+PASS	Per base GC content	chr22_206583718.simulated.custom.10x100
+FAIL	Per sequence GC content	chr22_206583718.simulated.custom.10x100
+PASS	Per base N content	chr22_206583718.simulated.custom.10x100
+PASS	Sequence Length Distribution	chr22_206583718.simulated.custom.10x100
+PASS	Sequence Duplication Levels	chr22_206583718.simulated.custom.10x100
+PASS	Overrepresented sequences	chr22_206583718.simulated.custom.10x100
+WARN	Kmer Content	chr22_206583718.simulated.custom.10x100
