@@ -1,3 +1,4 @@
+import argparse
 import random
 import itertools
 from collections import deque, Counter
@@ -134,19 +135,31 @@ def write_to_fastq(fn, header, reads):
         f.write('I'*len(read) + '\n')
 
 def main():
-    FN = [("chr22_157501105.fasta", "chr22_157501105.sampled.fasta"), ("chr22_206583718.fasta", "chr22_206583718.sampled.fasta")]
-    coverage = 10
-    bp_length = 100
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-i", "--input", type=str, help="filename")
+    parser.add_argument("-b", "--basepairs", type=int, help="base pair length")
+    parser.add_argument("-c", "--coverage", type=int, help="coverage")
+    parser.add_argument("-o", "--output", type=str, help="output")
+    args = parser.parse_args()
+
+    #FN = [("chr22_157501105.fasta", "chr22_157501105.sampled.fasta"), ("chr22_206583718.fasta", "chr22_206583718.sampled.fasta")]
+    #coverage = 10
+    #bp_length = 100
+
+    fn = args.input
+    bp_length = args.basepairs
+    coverage = args.coverage
+    output = args.output
 
     #generate_new_samples(FN)
 
     probs = parse_profile("HiSeq2kL100R1.txt")
-    reads = simulate_short_reads(FN[1][1], bp_length, coverage, probs)
+    reads = simulate_short_reads(fn, bp_length, coverage, probs)
 
     #write reads to fastq
-    out_fn = "chr22_206583718.simulated.custom.10x100"
-    header = list(parse_fasta(FN[1][1]))[0][0]
-    write_to_fastq(out_fn, header, reads)
+    header = list(parse_fasta(fn))[0][0]
+    write_to_fastq(output, header, reads)
 
 
 if __name__ == '__main__':
