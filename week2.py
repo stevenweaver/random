@@ -141,11 +141,11 @@ def main():
     #generate_new_samples(FN)
 
     probs = parse_profile("HiSeq2kL100R1.txt")
-    reads = simulate_short_reads(FN[0][1], bp_length, coverage, probs)
+    reads = simulate_short_reads(FN[1][1], bp_length, coverage, probs)
 
     #write reads to fastq
-    out_fn = "chr22_157501105.simulated.custom.10x100"
-    header = list(parse_fasta(FN[0][1]))[0][0]
+    out_fn = "chr22_206583718.simulated.custom.10x100"
+    header = list(parse_fasta(FN[1][1]))[0][0]
     write_to_fastq(out_fn, header, reads)
 
 
