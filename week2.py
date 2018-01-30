@@ -38,7 +38,8 @@ def parse_fasta(fasta_name):
         yield header, seq
 
 def reverse_complement(string):
-    return string[::-1]
+    complement = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
+    return [complement[x] for x in string[::-1]]
 
 # Also need to take reverse complement occasionally
 def sample_fasta(fn, contig, region, outfile):
@@ -137,10 +138,10 @@ def write_to_fastq(fn, header, reads):
 def main():
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i", "--input", type=str, help="filename")
-    parser.add_argument("-b", "--basepairs", type=int, help="base pair length")
-    parser.add_argument("-c", "--coverage", type=int, help="coverage")
-    parser.add_argument("-o", "--output", type=str, help="output")
+    parser.add_argument("-i", "--input", type=str, help="filename", required=True)
+    parser.add_argument("-b", "--basepairs", type=int, help="base pair length", required=True)
+    parser.add_argument("-c", "--coverage", type=int, help="coverage", required=True)
+    parser.add_argument("-o", "--output", type=str, help="output", required=True)
     args = parser.parse_args()
 
     #FN = [("chr22_157501105.fasta", "chr22_157501105.sampled.fasta"), ("chr22_206583718.fasta", "chr22_206583718.sampled.fasta")]
