@@ -1,0 +1,34 @@
+1. Read chapters 4,5, and 6 of Bioinformatics Data Skills
+– After you complete the rest of the assignment, put all of your files in a folder on bioinformatics server (e.g. ~/compgen/week2)
+– Make a GIT repository of this folder
+– Make a text file copy of your git log (git log > mygitlog.txt) and include this text file with the other files as part of your gzip archive
+2. Use samtools faidx to sample 100,000 bp from the same region of both copies of one of the Venter chromosomes.
+– Venter chromosomes are in :/usr/local/ventergenomes
+– Sample 100,000 base pairs from the same region of each (avoid the beginning and ends of the chromosome files has they have lots of N’s)
+3. Write a python program to simulate fastq file short-read data from your two fasta files (for the 100,000 regions)
+– The program should sample evenly from all portions of the file, and should sample both strands (i.e. sequence and its reverse complement)
+evenly
+– The output file will be in fastq format with each read appearing as one sequence (i.e. 4 lines in the file)
+– The quality line in the fastq file should just be a sequence of “I” symbols (capital letter i ) – there is no quality info in this case
+– The program should take 4 command line arguments: 1) Input filename 2) Output filename (the fastq filename) 3) Length of the reads 4) Depth of
+coverage (e.g. 10)
+4. Use your program to sample each of your two sample fasta files with 100bp reads and 10X coverage.
+5. Use the ART program (already installed) to sample each of your files with 100bp reads and 10X coverage.
+– Read the instructions: art_illumina_README.txt (on CANVAS)
+– Use HS20 (HiSeq 2000) sequencing system
+6. Run the fastqc program (already installed) on each of your four fastq files
+7. Write a one to two page summary of how the ART results and your simulation results compare in:
+– Per base sequence content
+– Per sequence GC content
+– Per base N content
+– Sequence Length Distribution
+– Sequence Duplication Levels
+– Overrepresented sequences
+– Kmer Content
+8. Turn in a gzipped archive containing the following 6 files (clearly named):
+1. Two chromosome samples (fasta files)
+2. Python program
+3. Two files with simulated data generated using your python program
+4. Two files with simulated data generated using ART
+5. Your one page summary of fastqc results
+6. The text file with your git log (from step 1) 
