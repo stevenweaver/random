@@ -1,0 +1,141 @@
+Steven Weaver
+Week 2
+Computational Genomics
+======================
+
+# Per base sequence content
+
+## chr22_157501105
+
+### ART
+Per base sequence content hovered around 28% for both adenine and thymine,  and
+22% for both cytosine and guanine.
+
+### Custom
+Per base sequence content were a bit different. 30% for adenine, 26% for
+thymine, 22% for both cytosine and guanine. The discrepancy may come from not
+weighting what kind of substitution can be made when introducing read errors.
+
+## chr22_206583718
+
+### ART
+Per base sequence content hovered around 28% for both adenine and thymine,  and
+22% for both cytosine and guanine.
+
+### Custom
+Per base sequence content were a bit different. 30% for adenine, 26% for
+thymine, 22% for both cytosine and guanine. The discrepancy may come from not
+weighting what kind of substitution can be made when introducing read errors.
+
+
+# Per sequence GC content
+
+## chr22_157501105
+
+### ART
+
+The theoretical distribution has a mu of 48%.
+
+### Custom
+
+The theoretical distribution has a mu of 37%. However, the shape of the actual
+distribution is not all that different. The GC content in my simulation does not
+have as high of a peak around 51%.
+
+## chr22_206583718
+
+### ART
+
+The theoretical distribution has a mu of 38%.
+
+### Custom
+
+The theoretical distribution has a mu of 48%. However, the shape of the actual
+distribution is not all that different. The GC content in my simulation has a
+peak around 50%.
+
+
+# Per base N content
+
+## chr22_157501105
+
+### ART
+0
+
+### Custom
+0
+
+## chr22_206583718
+
+### ART
+0
+
+### Custom
+0
+
+
+# Sequence Length Distribution
+
+## chr22_157501105
+### ART
+100
+### Custom
+100
+
+## chr22_206583718
+### ART
+100
+### Custom
+100
+
+
+# Sequence Duplication Levels
+
+## chr22_157501105
+
+### ART
+1 duplicated sequences.
+
+### Custom
+0 duplicated sequences.
+
+
+## chr22_206583718
+### ART
+1 duplicated sequences.
+
+### Custom
+0 duplicated sequences.
+
+
+# Overrepresented sequences
+
+## chr22_157501105
+### ART
+0
+### Custom
+0
+
+## chr22_206583718
+### ART
+0
+### Custom
+0
+
+
+# Kmer Content
+
+## chr22_157501105
+### ART
+No overrepresented kmers
+### Custom
+GACTACA overrepresented at position 3.
+
+## chr22_206583718
+### ART
+No overrepresented kmers
+### Custom
+No overrepresented kmers
+
+
+
